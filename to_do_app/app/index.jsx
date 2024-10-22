@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import ToDoItems from "../components/ToDoItems";
 import AddToDo from "../components/AddToDo";
+import { TouchableOpacity } from "react-native";
+import { TouchableWithoutFeedback } from "react-native-web";
+import { Pressable } from "react-native";
 
 const App = () => {
   let [todos, setTodos] = useState([
@@ -23,7 +26,7 @@ const App = () => {
     });
   };
   return (
-    <View style={style.container}>
+    <View style={style.container} onPress={() => alert("He")}>
       <Header />
       <View style={style.content}>
         <AddToDo submitHandler={submitHandler} />
